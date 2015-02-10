@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="FlnBusRoutes.Android\FlnBusRoutes.Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android_API_16" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlnBusRoutes.Android\MainActivity.cs">
+    <Files>
+      <File FileName="FlnBusRoutes.Android\MainActivity.cs" Line="27" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FlnBusRoutes.Android MonoForAntroid.PreferredDevice="Nexus 4" />
+</Properties>
