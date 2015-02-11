@@ -64,23 +64,26 @@ namespace FlnBusRoutes.AndroidApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int buttonSearch = 2131099649;
-			
 			// aapt resource value: 0x7f060003
-			public const int routeNameText = 2131099651;
-			
-			// aapt resource value: 0x7f060004
-			public const int routeTimetableGridView = 2131099652;
-			
-			// aapt resource value: 0x7f060005
-			public const int routeTrackListView = 2131099653;
-			
-			// aapt resource value: 0x7f060002
-			public const int routesListView = 2131099650;
+			public const int buttonSearch = 2131099651;
 			
 			// aapt resource value: 0x7f060000
-			public const int textStreet = 2131099648;
+			public const int routeNameTextView = 2131099648;
+			
+			// aapt resource value: 0x7f060005
+			public const int routeTimetableGridView = 2131099653;
+			
+			// aapt resource value: 0x7f060006
+			public const int routeTrackListView = 2131099654;
+			
+			// aapt resource value: 0x7f060004
+			public const int routesListView = 2131099652;
+			
+			// aapt resource value: 0x7f060002
+			public const int textStreet = 2131099650;
+			
+			// aapt resource value: 0x7f060001
+			public const int timeTextView = 2131099649;
 			
 			static Id()
 			{
@@ -96,10 +99,16 @@ namespace FlnBusRoutes.AndroidApp
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int BusRouteRow = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int RouteDetails = 2130903041;
+			public const int BusTimetableRow = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int RouteDetails = 2130903043;
 			
 			static Layout()
 			{

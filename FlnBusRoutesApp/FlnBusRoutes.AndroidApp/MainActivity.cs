@@ -11,7 +11,7 @@ using FlnBusRoutes.Shared.Domain;
 
 namespace FlnBusRoutes.AndroidApp
 {
-    [Activity(Label = "FlnBusRoutes.AndroidApp", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "FLN Bus Routes", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         public TextView StreetText { get; set; }
@@ -36,16 +36,23 @@ namespace FlnBusRoutes.AndroidApp
         void OnRoutesListViewItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var intent = new Intent(this, typeof (RouteTrackActivity));
-            intent.PutExtra("routeId", 32);
-            intent.PutExtra("routeName", "133 - AGRONÔMICA VIA MAURO RAMOS");
+            var busRouteAdapter = RoutesListView.Adapter as BusRouteAdapter;
+            if (busRouteAdapter != null)
+            {
+                var busRoute = busRouteAdapter[e.Position];
+                intent.PutExtra("routeId", busRoute.Id);
+                intent.PutExtra("routeFullName", busRoute.FullName);
+            }
+
             StartActivity(intent);
         }
 
         void OnSearchButtonClick(object sender, EventArgs e)
         {
+            var busRouteAdapter = new BusRouteAdapter(this, Resource.Layout.BusRouteRow,
+                BusRoutesService.Service.FindRoutesByStopName(StreetText.Text));
 
-            RoutesListView.Adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1,
-                         BusRoutesService.Service.FindRoutesByStopName(StreetText.Text).Select(b => string.Format("{0} - {1}", b.ShortName, b.LongName)).ToList());
+            RoutesListView.Adapter = busRouteAdapter;
         }
     }
 }

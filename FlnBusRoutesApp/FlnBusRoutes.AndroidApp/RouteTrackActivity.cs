@@ -13,12 +13,12 @@ using FlnBusRoutes.Shared;
 
 namespace FlnBusRoutes.AndroidApp
 {
-    [Activity(Label = "RouteTrackActivity")]
+    [Activity(Label = "Bus Routes", Icon = "@drawable/icon")]
     public class RouteTrackActivity : Activity
     {
         public TextView RouteNameTextView { get; set; }
         public ListView RouteTrackListView { get; set; }
-        public ListView RouteTimetableGridView { get; set; }
+        public GridView RouteTimetableGridView { get; set; }
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -26,14 +26,14 @@ namespace FlnBusRoutes.AndroidApp
 
             SetContentView(Resource.Layout.RouteDetails);
 
-            RouteNameTextView = FindViewById<TextView>(Resource.Id.routeNameText);
+            RouteNameTextView = FindViewById<TextView>(Resource.Id.routeNameTextView);
+            RouteTimetableGridView = FindViewById<GridView>(Resource.Id.routeTimetableGridView);
             RouteTrackListView = FindViewById<ListView>(Resource.Id.routeTrackListView);
-            RouteTimetableGridView = FindViewById<ListView>(Resource.Id.routeTimetableGridView);
 
-            RouteNameTextView.Text = Intent.GetStringExtra("routeName");
+            RouteNameTextView.Text = Intent.GetStringExtra("fullName");
             var routeId = Intent.GetIntExtra("routeId", -1);
 
-            RouteTimetableGridView.Adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1,
+            RouteTimetableGridView.Adapter = new ArrayAdapter<String>(this, Resource.Layout.BusTimetableRow,
                 BusRoutesService.Service.FindDeparturesByRouteId(routeId)
                     .OrderBy(s => s.Calendar).ThenBy(s => s.Time)
                     .Select(s => s.Time).ToList());
@@ -41,7 +41,7 @@ namespace FlnBusRoutes.AndroidApp
             RouteTrackListView.Adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1,
                 BusRoutesService.Service.FindStopsByRouteId(routeId)
                     .OrderBy(s => s.Sequence)
-                    .Select(s => string.Format("{0} - {1}", s.Sequence, s.Name)).ToList());
+                    .Select(s => s.Description).ToList());
         }
     }
 }
