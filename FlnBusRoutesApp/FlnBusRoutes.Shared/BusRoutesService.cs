@@ -13,8 +13,7 @@ using Android.Views;
 using Android.Widget;
 using FlnBusRoutes.Shared.Domain;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Org.Json;
+using System.Threading.Tasks;
 
 namespace FlnBusRoutes.Shared
 {
@@ -44,49 +43,54 @@ namespace FlnBusRoutes.Shared
             };
         }
 
-        public IEnumerable<BusRoute> FindRoutesByStopName(string stopName)
+        public async Task<IEnumerable<BusRoute>> FindRoutesByStopName(string stopName)
         {
-            string returnValue;
-
             var jsonString = "{\"params\": {\"stopName\": \"%" + stopName + "%\"}}";
-
+            IEnumerable<BusRoute> busRoutes = Enumerable.Empty<BusRoute>();
+            
             using (var webClient = GetDefaultWebClient())
-                returnValue = webClient.UploadString(FindRoutesByStopNameUrl, WebRequestMethods.Http.Post, jsonString);
+            {
+                var returnValue =
+                await webClient.UploadStringTaskAsync(FindRoutesByStopNameUrl, WebRequestMethods.Http.Post, jsonString);
 
-            if (!string.IsNullOrWhiteSpace(returnValue))
-                return JsonConvert.DeserializeObject<BusRouteJson>(returnValue).Rows;
+                if (!string.IsNullOrWhiteSpace(returnValue))
+                    busRoutes = JsonConvert.DeserializeObject<BusRouteJson>(returnValue).Rows;
+            }
 
-            return Enumerable.Empty<BusRoute>();
+            return busRoutes;
         }
 
-        public IEnumerable<BusStop> FindStopsByRouteId(int routeId)
+        public async Task<IEnumerable<BusStop>> FindStopsByRouteId(int routeId)
         {
-            string returnValue;
-
             var jsonString = "{\"params\": {\"routeId\": " + routeId + "}}";
-
+            var stops = Enumerable.Empty<BusStop>();
             using (var webClient = GetDefaultWebClient())
-                returnValue = webClient.UploadString(FindStopsByRouteIdUrl, WebRequestMethods.Http.Post, jsonString);
+            {
+                var returnValue =
+                await webClient.UploadStringTaskAsync(FindStopsByRouteIdUrl, WebRequestMethods.Http.Post, jsonString);
 
-            if (!string.IsNullOrWhiteSpace(returnValue))
-                return JsonConvert.DeserializeObject<BusStopJson>(returnValue).Rows;
+                if (!string.IsNullOrWhiteSpace(returnValue))
+                    stops = JsonConvert.DeserializeObject<BusStopJson>(returnValue).Rows;
+            }
 
-            return Enumerable.Empty<BusStop>();
+            return stops;
         }
 
-        public IEnumerable<BusDeparture> FindDeparturesByRouteId(int routeId)
+        public async Task<IEnumerable<BusDeparture>> FindDeparturesByRouteId(int routeId)
         {
-            string returnValue;
-
             var jsonString = "{\"params\": {\"routeId\": " + routeId + "}}";
+            var departures = Enumerable.Empty<BusDeparture>();
 
             using (var webClient = GetDefaultWebClient())
-                returnValue = webClient.UploadString(FindDeparturesByRouteIdUrl, WebRequestMethods.Http.Post, jsonString);
+            {
+                var returnValue =
+                    await webClient.UploadStringTaskAsync(FindDeparturesByRouteIdUrl, WebRequestMethods.Http.Post, jsonString);
+                
+                if (!string.IsNullOrWhiteSpace(returnValue))
+                    departures = JsonConvert.DeserializeObject<BusDepartureJson>(returnValue).Rows;
+            }
 
-            if (!string.IsNullOrWhiteSpace(returnValue))
-                return JsonConvert.DeserializeObject<BusDepartureJson>(returnValue).Rows;
-
-            return Enumerable.Empty<BusDeparture>();
+            return departures;
         }
 
         /*

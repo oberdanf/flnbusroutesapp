@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -47,12 +49,10 @@ namespace FlnBusRoutes.AndroidApp
             StartActivity(intent);
         }
 
-        void OnSearchButtonClick(object sender, EventArgs e)
+        async void OnSearchButtonClick(object sender, EventArgs e)
         {
-            var busRouteAdapter = new BusRouteAdapter(this, Resource.Layout.BusRouteRow,
-                BusRoutesService.Service.FindRoutesByStopName(StreetText.Text));
-
-            RoutesListView.Adapter = busRouteAdapter;
+            var routesByStopName = await BusRoutesService.Service.FindRoutesByStopName(StreetText.Text);
+            RoutesListView.Adapter = new BusRouteAdapter(this, Resource.Layout.BusRouteRow, routesByStopName);
         }
     }
 }

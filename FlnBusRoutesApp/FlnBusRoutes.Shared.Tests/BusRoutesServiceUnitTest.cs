@@ -8,16 +8,16 @@ namespace FlnBusRoutes.Shared.Tests
     [TestClass]
     public class BusRoutesServiceUnitTest
     {
-        [TestMethod]
-        public void WhenFindingRoutesForLauroLinharesStreetShouldReturnMoreThanZero()
-        {
-            Assert.IsTrue(BusRoutesService.Service.FindRoutesByStopName("lauro linhares").Any());
-        }
+        //[TestMethod]
+        //public void WhenFindingRoutesForLauroLinharesStreetShouldReturnMoreThanZero()
+        //{
+        //    Assert.IsTrue(BusRoutesService.Service.FindRoutesByStopName("lauro linhares").Any());
+        //}
 
-        [TestMethod]
-        public void WhenFindingRoutesForInexistentStreetShouldReturnZeroCount()
-        {
-            Assert.IsTrue(!BusRoutesService.Service.FindRoutesByStopName("asdfasdfasdf").Any());
-        }
+        //[TestMethod]
+        //public void WhenFindingRoutesForInexistentStreetShouldReturnZeroCount()
+        //{
+        //    Assert.IsTrue(!BusRoutesService.Service.FindRoutesByStopName("asdfasdfasdf").Any());
+        //}
     }
 }
