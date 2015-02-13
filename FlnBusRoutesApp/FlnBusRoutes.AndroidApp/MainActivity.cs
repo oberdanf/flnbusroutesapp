@@ -14,26 +14,41 @@ using FlnBusRoutes.Shared.Domain;
 namespace FlnBusRoutes.AndroidApp
 {
     [Activity(Label = "FLN Bus Routes", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+	public class MainActivity : Activity, IGenericActivity
     {
         public TextView StreetText { get; set; }
-        public Button SearchButton { get; set; }
+		public Button SearchButton { get; set; }
         public ListView RoutesListView { get; set; }
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
-            StreetText = FindViewById<TextView>(Resource.Id.textStreet);
-            SearchButton = FindViewById<Button>(Resource.Id.buttonSearch);
-            RoutesListView = FindViewById<ListView>(Resource.Id.routesListView);
-
-            SearchButton.Click += OnSearchButtonClick;
-            RoutesListView.ItemClick += OnRoutesListViewItemClick;
+			FindViews ();
+			SetEvents ();
         }
+
+		#region IGenericActivity implementation
+
+		public void FindViews ()
+		{
+			StreetText = FindViewById<TextView>(Resource.Id.textStreet);
+			SearchButton = FindViewById<Button>(Resource.Id.buttonSearch);
+			RoutesListView = FindViewById<ListView>(Resource.Id.routesListView);
+		}
+
+		public void SetEvents ()
+		{
+			SearchButton.Click += OnSearchButtonClick;
+			RoutesListView.ItemClick += OnRoutesListViewItemClick;
+		}
+
+		public void UpdateLayout ()
+		{
+			//do nothing yet
+		}
+
+		#endregion
 
         void OnRoutesListViewItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -51,8 +66,21 @@ namespace FlnBusRoutes.AndroidApp
 
         async void OnSearchButtonClick(object sender, EventArgs e)
         {
-            var routesByStopName = await BusRoutesService.Service.FindRoutesByStopName(StreetText.Text);
-            RoutesListView.Adapter = new BusRouteAdapter(this, Resource.Layout.BusRouteRow, routesByStopName);
+            try
+            {
+				string street = StreetText.Text;
+				if(!string.IsNullOrWhiteSpace(street))
+				{
+					var routesByStopName = await BusRoutesService.Service.FindRoutesByStopName(street);
+	                RoutesListView.Adapter = new BusRouteAdapter(this, Resource.Layout.BusRouteRow, routesByStopName);
+				}
+				else
+					Toast.MakeText(this, "Please, type a street name", ToastLength.Long).Show();
+            }
+            catch (Exception)
+            {
+                Toast.MakeText(this, "An error ocurred whilst trying to search routes.", ToastLength.Long).Show();
+            }
         }
     }
 }

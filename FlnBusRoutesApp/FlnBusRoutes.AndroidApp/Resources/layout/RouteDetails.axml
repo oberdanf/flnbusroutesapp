@@ -1,100 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fillViewport="true"
-    android:id="@+id/routeDetailsScrollView">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceLarge"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:id="@+id/routeDetailsScrollView">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/routeNameTextView"
-            android:clickable="false"
-            android:editable="false"
-            android:gravity="center_vertical" />
-        <TextView
-            android:text="Weekday"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/routeNameTextView"
-            android:id="@+id/weekDayTextView"
-            android:layout_marginTop="10dp" />
-        <GridView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/weekDayTextView"
-            android:id="@+id/weekdayRouteTimetableGridView"
-            android:numColumns="5"
-            android:verticalSpacing="2dp"
-            android:horizontalSpacing="4dp"
-            android:stretchMode="columnWidth"
-            android:scrollbars="vertical"
-            android:fadeScrollbars="true"
-            android:gravity="center_horizontal" />
-        <TextView
-            android:text="Saturday"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/weekdayRouteTimetableGridView"
-            android:id="@+id/saturdayTextView"
-            android:layout_marginTop="10dp" />
-        <GridView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/saturdayTextView"
-            android:id="@+id/saturdayRouteTimetableGridView"
-            android:numColumns="5"
-            android:verticalSpacing="2dp"
-            android:horizontalSpacing="4dp"
-            android:stretchMode="columnWidth"
-            android:scrollbars="vertical"
-            android:fadeScrollbars="true" />
-        <TextView
-            android:text="Sunday"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/saturdayRouteTimetableGridView"
-            android:id="@+id/sundayTextView"
-            android:layout_marginTop="10dp" />
-        <GridView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/sundayTextView"
-            android:id="@+id/sundayRouteTimetableGridView"
-            android:numColumns="5"
-            android:verticalSpacing="2dp"
-            android:horizontalSpacing="4dp"
-            android:stretchMode="columnWidth"
-            android:scrollbars="vertical"
-            android:fadeScrollbars="true" />
-        <TextView
-            android:text="Streets within the route..."
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/sundayRouteTimetableGridView"
-            android:id="@+id/routeStreetsTextView"
-            android:layout_marginTop="10dp" />
-        <ListView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/routeStreetsTextView"
-            android:id="@+id/routeTrackListView"
-            android:scrollbars="vertical"
-            android:verticalScrollbarPosition="defaultPosition" />
-    </RelativeLayout>
-</ScrollView>
+            android:layout_height="match_parent">
+            <Button
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backButton" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/routeNameTextView"
+                android:clickable="false"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:layout_below="@id/backButton" />
+            <TextView
+                android:text="Weekday"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/routeNameTextView"
+                android:id="@+id/weekDayTextView"
+                android:layout_marginTop="10dp" />
+            <GridView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekDayTextView"
+                android:id="@+id/weekdayRouteTimetableGridView"
+                android:numColumns="5"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="4dp"
+                android:stretchMode="columnWidth"
+                android:scrollbars="none"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:text="Saturday"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekdayRouteTimetableGridView"
+                android:id="@+id/saturdayTextView"
+                android:layout_marginTop="10dp" />
+            <GridView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturdayTextView"
+                android:id="@+id/saturdayRouteTimetableGridView"
+                android:numColumns="5"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="4dp"
+                android:stretchMode="columnWidth"
+                android:scrollbars="none" />
+            <TextView
+                android:text="Sunday"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturdayRouteTimetableGridView"
+                android:id="@+id/sundayTextView"
+                android:layout_marginTop="10dp" />
+            <GridView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sundayTextView"
+                android:id="@+id/sundayRouteTimetableGridView"
+                android:numColumns="5"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="4dp"
+                android:stretchMode="columnWidth"
+                android:scrollbars="none" />
+            <TextView
+                android:text="Streets within the route..."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sundayRouteTimetableGridView"
+                android:id="@+id/routeStreetsTextView"
+                android:layout_marginTop="10dp" />
+            <ListView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/routeStreetsTextView"
+                android:id="@+id/routeTrackListView"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -64,6 +64,9 @@ namespace FlnBusRoutes.AndroidApp
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060006
+			public const int backButton = 2131099654;
+			
 			// aapt resource value: 0x7f060003
 			public const int buttonSearch = 2131099651;
 			
@@ -73,26 +76,26 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f060000
 			public const int routeNameTextView = 2131099648;
 			
-			// aapt resource value: 0x7f06000c
-			public const int routeStreetsTextView = 2131099660;
-			
 			// aapt resource value: 0x7f06000d
-			public const int routeTrackListView = 2131099661;
+			public const int routeStreetsTextView = 2131099661;
+			
+			// aapt resource value: 0x7f06000e
+			public const int routeTrackListView = 2131099662;
 			
 			// aapt resource value: 0x7f060004
 			public const int routesListView = 2131099652;
 			
-			// aapt resource value: 0x7f060009
-			public const int saturdayRouteTimetableGridView = 2131099657;
+			// aapt resource value: 0x7f06000a
+			public const int saturdayRouteTimetableGridView = 2131099658;
 			
-			// aapt resource value: 0x7f060008
-			public const int saturdayTextView = 2131099656;
+			// aapt resource value: 0x7f060009
+			public const int saturdayTextView = 2131099657;
+			
+			// aapt resource value: 0x7f06000c
+			public const int sundayRouteTimetableGridView = 2131099660;
 			
 			// aapt resource value: 0x7f06000b
-			public const int sundayRouteTimetableGridView = 2131099659;
-			
-			// aapt resource value: 0x7f06000a
-			public const int sundayTextView = 2131099658;
+			public const int sundayTextView = 2131099659;
 			
 			// aapt resource value: 0x7f060002
 			public const int textStreet = 2131099650;
@@ -100,11 +103,11 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f060001
 			public const int timeTextView = 2131099649;
 			
-			// aapt resource value: 0x7f060006
-			public const int weekDayTextView = 2131099654;
-			
 			// aapt resource value: 0x7f060007
-			public const int weekdayRouteTimetableGridView = 2131099655;
+			public const int weekDayTextView = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int weekdayRouteTimetableGridView = 2131099656;
 			
 			static Id()
 			{

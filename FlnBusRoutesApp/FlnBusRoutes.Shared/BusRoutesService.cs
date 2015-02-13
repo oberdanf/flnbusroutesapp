@@ -19,6 +19,16 @@ namespace FlnBusRoutes.Shared
 {
     public class BusRoutesService
     {
+        private class CustomTimeoutWebClient : WebClient
+        {
+            protected override WebRequest GetWebRequest(Uri uri)
+            {
+                var webRequest = base.GetWebRequest(uri);
+                webRequest.Timeout = 30000; //30s
+                return webRequest;
+            }
+        }
+
         private const string FindRoutesByStopNameUrl = "https://api.appglu.com/v1/queries/findRoutesByStopName/run";
         private const string FindStopsByRouteIdUrl = "https://api.appglu.com/v1/queries/findStopsByRouteId/run";
         private const string FindDeparturesByRouteIdUrl = "https://api.appglu.com/v1/queries/findDeparturesByRouteId/run";
@@ -32,7 +42,7 @@ namespace FlnBusRoutes.Shared
 
         private WebClient GetDefaultWebClient()
         {
-            return new WebClient
+            return new CustomTimeoutWebClient
             {
                 Credentials = new NetworkCredential("WKD4N7YMA1uiM8V", "DtdTtzMLQlA0hk2C1Yi5pLyVIlAQ68"),
                 Headers =
