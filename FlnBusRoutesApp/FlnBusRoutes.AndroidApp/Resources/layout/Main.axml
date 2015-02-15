@@ -14,6 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonSearch" />
+    <Button
+        android:text="Search with Google Maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSearchWithGoogleMaps" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

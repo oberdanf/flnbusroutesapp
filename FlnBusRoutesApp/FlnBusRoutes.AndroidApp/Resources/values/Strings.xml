@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ApplicationName">FLN Bus Routes</string>
+    <string name="app_name">FLN Bus Routes</string>
+	<string name="GoogleApiKey">AIzaSyAxtzp2tUMtPh3mXJJXalxRqnk_nJJ5Fts</string>
 </resources>
