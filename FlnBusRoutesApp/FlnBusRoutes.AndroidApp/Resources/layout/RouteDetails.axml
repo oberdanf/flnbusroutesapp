@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -22,10 +23,18 @@
                 android:id="@+id/routeNameTextView"
                 android:clickable="false"
                 android:editable="false"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:layout_below="@id/backButton" />
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBarDetails"
+                android:indeterminate="true"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateOnly="true"
+                android:visibility="invisible" />
             <TextView
-                android:text="Weekday"
+                android:text="@string/weekday"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +55,7 @@
                 android:scrollbars="none"
                 android:gravity="center_horizontal" />
             <TextView
-                android:text="Saturday"
+                android:text="@string/saturday"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,7 +75,7 @@
                 android:stretchMode="columnWidth"
                 android:scrollbars="none" />
             <TextView
-                android:text="Sunday"
+                android:text="@string/sunday"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,7 +95,7 @@
                 android:stretchMode="columnWidth"
                 android:scrollbars="none" />
             <TextView
-                android:text="Streets within the route..."
+                android:text="@string/streets_within_route"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

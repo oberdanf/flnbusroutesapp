@@ -55,6 +55,7 @@
     <Compile Include="Domain\BusStopJson.cs" />
     <Compile Include="Domain\JsonGeneric.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

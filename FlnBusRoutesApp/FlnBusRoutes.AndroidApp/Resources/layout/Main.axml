@@ -2,23 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+    <TextView
+        android:text="@string/street_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/streetNameTextView"
+        android:textIsSelectable="false"
+        android:singleLine="true"
+        android:clickable="false"
+        android:longClickable="false"
+        android:gravity="left"
+        android:layout_marginTop="10dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textStreet"
         android:autoText="true"
-        android:inputType="textAutoComplete" />
+        android:inputType="textAutoComplete"
+        android:layout_marginTop="10dp" />
     <Button
-        android:text="Search Street"
+        android:text="@string/search_street"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonSearch" />
     <Button
-        android:text="Search with Google Maps"
+        android:text="@string/search_street_with_google_maps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonSearchWithGoogleMaps" />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarMain"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateOnly="true"
+        android:visibility="invisible" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

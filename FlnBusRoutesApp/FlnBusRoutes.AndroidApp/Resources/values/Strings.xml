@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FLN Bus Routes</string>
-	<string name="GoogleApiKey">AIzaSyAxtzp2tUMtPh3mXJJXalxRqnk_nJJ5Fts</string>
+	<string name="google_api_key">AIzaSyAxtzp2tUMtPh3mXJJXalxRqnk_nJJ5Fts</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="no_routes_found_for_street">No routes found for street \'{0}\'.</string>
+	<string name="please_type_street">Please, type a street name.</string>
+	<string name="error_search_routes">An error ocurred whilst trying to search routes.</string>
+	<string name="going_to_search_routes_for_street">"You are going to search routes for \'{0}\'."</string>
+	<string name="error_loading_bus_stops">An error ocurred whilst trying to load bus stops!</string>
+	<string name="error_loading_bus_timetable">An error ocurred whilst trying to load the route timetable!</string>
+	<string name="error_no_internet">Cant continue. No internet connection!</string>
+	<string name="weekday">Weekday</string>
+	<string name="saturday">Saturday</string>
+	<string name="sunday">Sunday</string>
+	<string name="street_name_param">streetName</string>
+	<string name="route_id">routeId</string>
+	<string name="route_full_name">routeFullName</string>
+	<string name="street_name">Street Name:</string>
+	<string name="search_street">Search Street</string>
+	<string name="search_street_with_google_maps">Search with Google Maps</string>
+	<string name="streets_within_route">Streets within route...</string>
 </resources>

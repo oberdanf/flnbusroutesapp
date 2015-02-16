@@ -1520,8 +1520,8 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b0016
 			public const int always = 2131427350;
 			
-			// aapt resource value: 0x7f0b0060
-			public const int backButton = 2131427424;
+			// aapt resource value: 0x7f0b0062
+			public const int backButton = 2131427426;
 			
 			// aapt resource value: 0x7f0b0013
 			public const int beginning = 2131427347;
@@ -1529,11 +1529,11 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b002b
 			public const int book_now = 2131427371;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int buttonSearch = 2131427415;
-			
 			// aapt resource value: 0x7f0b0058
-			public const int buttonSearchWithGoogleMaps = 2131427416;
+			public const int buttonSearch = 2131427416;
+			
+			// aapt resource value: 0x7f0b0059
+			public const int buttonSearchWithGoogleMaps = 2131427417;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int buyButton = 2131427368;
@@ -1622,20 +1622,20 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b002a
 			public const int match_parent = 2131427370;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int media_route_control_frame = 2131427421;
+			// aapt resource value: 0x7f0b005f
+			public const int media_route_control_frame = 2131427423;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int media_route_disconnect_button = 2131427422;
-			
-			// aapt resource value: 0x7f0b005a
-			public const int media_route_list = 2131427418;
-			
-			// aapt resource value: 0x7f0b005b
-			public const int media_route_volume_layout = 2131427419;
+			// aapt resource value: 0x7f0b0060
+			public const int media_route_disconnect_button = 2131427424;
 			
 			// aapt resource value: 0x7f0b005c
-			public const int media_route_volume_slider = 2131427420;
+			public const int media_route_list = 2131427420;
+			
+			// aapt resource value: 0x7f0b005d
+			public const int media_route_volume_layout = 2131427421;
+			
+			// aapt resource value: 0x7f0b005e
+			public const int media_route_volume_slider = 2131427422;
 			
 			// aapt resource value: 0x7f0b0015
 			public const int middle = 2131427349;
@@ -1655,6 +1655,12 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b0025
 			public const int production = 2131427365;
 			
+			// aapt resource value: 0x7f0b0063
+			public const int progressBarDetails = 2131427427;
+			
+			// aapt resource value: 0x7f0b005a
+			public const int progressBarMain = 2131427418;
+			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;
 			
@@ -1664,20 +1670,20 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b003f
 			public const int radio = 2131427391;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int routeDetailsScrollView = 2131427423;
+			// aapt resource value: 0x7f0b0061
+			public const int routeDetailsScrollView = 2131427425;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int routeNameTextView = 2131427411;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int routeStreetsTextView = 2131427431;
+			// aapt resource value: 0x7f0b006a
+			public const int routeStreetsTextView = 2131427434;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int routeTrackListView = 2131427432;
+			// aapt resource value: 0x7f0b006b
+			public const int routeTrackListView = 2131427435;
 			
-			// aapt resource value: 0x7f0b0059
-			public const int routesListView = 2131427417;
+			// aapt resource value: 0x7f0b005b
+			public const int routesListView = 2131427419;
 			
 			// aapt resource value: 0x7f0b0026
 			public const int sandbox = 2131427366;
@@ -1685,11 +1691,11 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b0021
 			public const int satellite = 2131427361;
 			
-			// aapt resource value: 0x7f0b0064
-			public const int saturdayRouteTimetableGridView = 2131427428;
+			// aapt resource value: 0x7f0b0067
+			public const int saturdayRouteTimetableGridView = 2131427431;
 			
-			// aapt resource value: 0x7f0b0063
-			public const int saturdayTextView = 2131427427;
+			// aapt resource value: 0x7f0b0066
+			public const int saturdayTextView = 2131427430;
 			
 			// aapt resource value: 0x7f0b0049
 			public const int search_badge = 2131427401;
@@ -1739,17 +1745,20 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b0007
 			public const int split_action_bar = 2131427335;
 			
+			// aapt resource value: 0x7f0b0056
+			public const int streetNameTextView = 2131427414;
+			
 			// aapt resource value: 0x7f0b0027
 			public const int strict_sandbox = 2131427367;
 			
 			// aapt resource value: 0x7f0b0050
 			public const int submit_area = 2131427408;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int sundayRouteTimetableGridView = 2131427430;
+			// aapt resource value: 0x7f0b0069
+			public const int sundayRouteTimetableGridView = 2131427433;
 			
-			// aapt resource value: 0x7f0b0065
-			public const int sundayTextView = 2131427429;
+			// aapt resource value: 0x7f0b0068
+			public const int sundayTextView = 2131427432;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int tabMode = 2131427339;
@@ -1757,8 +1766,8 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b0022
 			public const int terrain = 2131427362;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int textStreet = 2131427414;
+			// aapt resource value: 0x7f0b0057
+			public const int textStreet = 2131427415;
 			
 			// aapt resource value: 0x7f0b0054
 			public const int timeTextView = 2131427412;
@@ -1772,11 +1781,11 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f0b0012
 			public const int useLogo = 2131427346;
 			
-			// aapt resource value: 0x7f0b0061
-			public const int weekDayTextView = 2131427425;
+			// aapt resource value: 0x7f0b0064
+			public const int weekDayTextView = 2131427428;
 			
-			// aapt resource value: 0x7f0b0062
-			public const int weekdayRouteTimetableGridView = 2131427426;
+			// aapt resource value: 0x7f0b0065
+			public const int weekdayRouteTimetableGridView = 2131427429;
 			
 			// aapt resource value: 0x7f0b001a
 			public const int withText = 2131427354;
@@ -1941,9 +1950,6 @@ namespace FlnBusRoutes.AndroidApp
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f06003b
-			public const int GoogleApiKey = 2131099707;
-			
 			// aapt resource value: 0x7f060006
 			public const int abc_action_bar_home_description = 2131099654;
 			
@@ -1997,6 +2003,9 @@ namespace FlnBusRoutes.AndroidApp
 			
 			// aapt resource value: 0x7f06003a
 			public const int app_name = 2131099706;
+			
+			// aapt resource value: 0x7f06003d
+			public const int cancel = 2131099709;
 			
 			// aapt resource value: 0x7f06001f
 			public const int common_android_wear_notification_needs_update_text = 2131099679;
@@ -2091,6 +2100,24 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f060019
 			public const int decline = 2131099673;
 			
+			// aapt resource value: 0x7f060042
+			public const int error_loading_bus_stops = 2131099714;
+			
+			// aapt resource value: 0x7f060043
+			public const int error_loading_bus_timetable = 2131099715;
+			
+			// aapt resource value: 0x7f060044
+			public const int error_no_internet = 2131099716;
+			
+			// aapt resource value: 0x7f060040
+			public const int error_search_routes = 2131099712;
+			
+			// aapt resource value: 0x7f060041
+			public const int going_to_search_routes_for_street = 2131099713;
+			
+			// aapt resource value: 0x7f06003b
+			public const int google_api_key = 2131099707;
+			
 			// aapt resource value: 0x7f060039
 			public const int library_name = 2131099705;
 			
@@ -2112,14 +2139,53 @@ namespace FlnBusRoutes.AndroidApp
 			// aapt resource value: 0x7f060005
 			public const int mr_user_route_category_name = 2131099653;
 			
+			// aapt resource value: 0x7f06003e
+			public const int no_routes_found_for_street = 2131099710;
+			
+			// aapt resource value: 0x7f06003c
+			public const int ok = 2131099708;
+			
+			// aapt resource value: 0x7f06003f
+			public const int please_type_street = 2131099711;
+			
+			// aapt resource value: 0x7f06004a
+			public const int route_full_name = 2131099722;
+			
+			// aapt resource value: 0x7f060049
+			public const int route_id = 2131099721;
+			
+			// aapt resource value: 0x7f060046
+			public const int saturday = 2131099718;
+			
+			// aapt resource value: 0x7f06004c
+			public const int search_street = 2131099724;
+			
+			// aapt resource value: 0x7f06004d
+			public const int search_street_with_google_maps = 2131099725;
+			
 			// aapt resource value: 0x7f060017
 			public const int store_picture_message = 2131099671;
 			
 			// aapt resource value: 0x7f060016
 			public const int store_picture_title = 2131099670;
 			
+			// aapt resource value: 0x7f06004b
+			public const int street_name = 2131099723;
+			
+			// aapt resource value: 0x7f060048
+			public const int street_name_param = 2131099720;
+			
+			// aapt resource value: 0x7f06004e
+			public const int streets_within_route = 2131099726;
+			
+			// aapt resource value: 0x7f060047
+			public const int sunday = 2131099719;
+			
 			// aapt resource value: 0x7f060038
 			public const int wallet_buy_button_place_holder = 2131099704;
+			
+			// aapt resource value: 0x7f060045
+			public const int weekday = 2131099717;
 			
 			static String()
 			{

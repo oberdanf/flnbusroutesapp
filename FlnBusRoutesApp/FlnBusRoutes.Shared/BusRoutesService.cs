@@ -2,15 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.Media;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using FlnBusRoutes.Shared.Domain;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
@@ -53,6 +44,7 @@ namespace FlnBusRoutes.Shared
             };
         }
 
+		//TODO: add results to a Cache system in order to not requery too often
         public async Task<IEnumerable<BusRoute>> FindRoutesByStopName(string stopName)
         {
             var jsonString = "{\"params\": {\"stopName\": \"%" + stopName + "%\"}}";
